@@ -1,5 +1,8 @@
 import './style.css';
+
 import { ProductsPage } from './view/Products';
+
+import NavBar from './view/NavBar';
 
 const app = document.querySelector('#app');
 
@@ -17,8 +20,14 @@ const router = () =>{
 }
 
 const render = (routerName = 'home') => {
+
   const pages = router[routerName] ? router[routerName] : HomePage();
   app.innerHTML =`<main class= "container">
+
+  const pages = router[router] || HomePage()
+  app.innerHTML = `
+  ${NavBar}
+  <main class = "container">
   ${pages}
   </main>
   `
