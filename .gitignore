@@ -1,9 +1,0 @@
-# macOS
-.DS_Store
-
-# Logs
-*.log
-
-# Env
-.env
-.env.*
