@@ -18,6 +18,7 @@ const router = () =>{
 const render = (routerName = 'home') => {
   const pages = router[router] || HomePage()
   app.innerHTML = `
+  ${NavBar()}
   <main class = "container">
   ${pages}
   </main>
