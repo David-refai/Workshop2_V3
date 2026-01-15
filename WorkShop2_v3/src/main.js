@@ -22,10 +22,8 @@ const router = () =>{
 const render = (routerName = 'home') => {
 
   const pages = router[routerName] ? router[routerName] : HomePage();
-  app.innerHTML =`<main class= "container">
 
-  const pages = router[router] || HomePage()
-  app.innerHTML = `
+  app.innerHTML =`<main class= "container">
   ${NavBar}
   <main class = "container">
   ${pages}
@@ -38,4 +36,4 @@ function getRouterFromHash(){
 }
 
 window.addEventListener('hashchange', () => render(getRouterFromHash()));
-render(getRouterFromHash())
+render(getRouterFromHash());
