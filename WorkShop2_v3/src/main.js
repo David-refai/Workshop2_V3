@@ -1,7 +1,32 @@
-import './style.css'
-import HomePage from "./view/HomePage"
+import './style.css';
 
-const f = function(){
-  HomePage
+const app = document.querySelector('#app');
 
+const HomePage = () =>{
+  return `<main class = "home">
+  <h1>Home</h1>
+  </main>
+  `
+};
+
+const router = () =>{
+  home: HomePage
+  // here all of the components 👇
+  // products: ProductsPage
 }
+
+const render = (routerName = 'home') => {
+  const pages = router[router] || HomePage()
+  app.innerHTML = `
+  <main class = "container">
+  ${pages}
+  </main>
+  `
+}
+
+function getRouterFromHash(){
+  return (location.hash || '#home').replace('#', '');
+}
+
+window.addEventListener('hashchange', () => render(getRouterFromHash()));
+render(getRouterFromHash())
