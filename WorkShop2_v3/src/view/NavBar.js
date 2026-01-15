@@ -1,5 +1,6 @@
-export function NavBar(){
-    return
+
+function NavBar(){
+    return`
     <header class="navbar">
         <div class="container header-inner">
             <a href="#" class="logo">DATORGANG</a>
@@ -15,5 +16,7 @@ export function NavBar(){
             </nav>
         </div>
     </header>
+    `
     ;
 }
+export default NavBar();

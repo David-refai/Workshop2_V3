@@ -1,4 +1,5 @@
 import './style.css';
+import NavBar from './view/NavBar';
 
 const app = document.querySelector('#app');
 
@@ -18,7 +19,7 @@ const router = () =>{
 const render = (routerName = 'home') => {
   const pages = router[router] || HomePage()
   app.innerHTML = `
-  ${NavBar()}
+  ${NavBar}
   <main class = "container">
   ${pages}
   </main>
